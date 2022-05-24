@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="live_feed=true" audit="true" label="basic table" max_length="40" name="x_58872_needit_table1" sizeclass="1" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="New True/False" max_length="40" name="u_boolean_4" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Choice 3" dependent="u_glide_date_6" dependent_on_field="u_glide_date_6" label="status" max_length="40" name="u_choice_7" type="string" use_dependent_field="true">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="date of presentation" mandatory="true" max_length="40" name="u_glide_date_6" type="glide_date"/>
+        <element label="New Icon" max_length="100" name="u_icon_8" type="icon"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="New Price" max_length="20" name="u_price_2" type="price"/>
+        <element attributes="encode_utf8=false" label="New Reference" max_length="32" name="u_reference_3" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="services provided" mandatory="true" max_length="40" name="u_string_5" type="string"/>
+        <index name="index">
+            <element name="u_reference_3"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
